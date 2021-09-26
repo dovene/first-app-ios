@@ -11,5 +11,17 @@ import UIKit
 
 class HelloViewController: UIViewController {
     
+    // MARK: - Properties
+    
+    public var welcomeMessage : String?
+    @IBOutlet private weak var welcomeLabel: UILabel!
+    
+    // MARK: - View Life Cycle
+
+      override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Welcome"
+        welcomeLabel.text = welcomeMessage
+      }
     
 }

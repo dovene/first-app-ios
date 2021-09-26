@@ -14,6 +14,7 @@ class ViewController: UIViewController {
 
     @IBOutlet private weak var label: UILabel!
     @IBOutlet private weak var button: UIButton!
+    @IBOutlet private weak var usernameTextField: UITextField!
     
 
     // MARK: - View Life Cycle
@@ -25,10 +26,17 @@ class ViewController: UIViewController {
         button.addTarget(self, action: #selector(launchHelloVC), for: .touchUpInside)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        usernameTextField.endEditing(true)
+    }
+    
+     // MARK: - Actions
+    
     @objc
     func launchHelloVC(){
         let storyBoard = UIStoryboard(name: "HelloViewController", bundle: nil)
-        let helloViewController = storyBoard.instantiateViewController(withIdentifier: "HelloViewController")
+        let helloViewController = storyBoard.instantiateViewController(withIdentifier: "HelloViewController") as! HelloViewController
+        helloViewController.welcomeMessage = usernameTextField.text
          self.navigationController?.pushViewController(helloViewController, animated: true)
     }
 
