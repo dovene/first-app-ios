@@ -15,6 +15,8 @@
 		D7487E9327005CE40091DEA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7487E9127005CE40091DEA4 /* LaunchScreen.storyboard */; };
 		D7487E9E27005CE60091DEA4 /* firstappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7487E9D27005CE60091DEA4 /* firstappTests.swift */; };
 		D7487EA927005CE60091DEA4 /* firstappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7487EA827005CE60091DEA4 /* firstappUITests.swift */; };
+		D7487EBA270079840091DEA4 /* HelloViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7487EB9270079840091DEA4 /* HelloViewController.storyboard */; };
+		D7487EBC27007E1E0091DEA4 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7487EBB27007E1E0091DEA4 /* HelloViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		D7487EA427005CE60091DEA4 /* firstappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = firstappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7487EA827005CE60091DEA4 /* firstappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstappUITests.swift; sourceTree = "<group>"; };
 		D7487EAA27005CE60091DEA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7487EB9270079840091DEA4 /* HelloViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HelloViewController.storyboard; sourceTree = "<group>"; };
+		D7487EBB27007E1E0091DEA4 /* HelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 			children = (
 				D7487E8C27005CB40091DEA4 /* Main.storyboard */,
 				D7487E9127005CE40091DEA4 /* LaunchScreen.storyboard */,
+				D7487EB9270079840091DEA4 /* HelloViewController.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				D7487E8A27005CB40091DEA4 /* ViewController.swift */,
+				D7487EBB27007E1E0091DEA4 /* HelloViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -256,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7487EBA270079840091DEA4 /* HelloViewController.storyboard in Resources */,
 				D7487E9327005CE40091DEA4 /* LaunchScreen.storyboard in Resources */,
 				D7487E9027005CE40091DEA4 /* Assets.xcassets in Resources */,
 				D7487E8E27005CB40091DEA4 /* Main.storyboard in Resources */,
@@ -286,6 +293,7 @@
 				D7487E8B27005CB40091DEA4 /* ViewController.swift in Sources */,
 				D7487E8727005CB40091DEA4 /* AppDelegate.swift in Sources */,
 				D7487E8927005CB40091DEA4 /* SceneDelegate.swift in Sources */,
+				D7487EBC27007E1E0091DEA4 /* HelloViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
