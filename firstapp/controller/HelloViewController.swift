@@ -22,7 +22,7 @@ class HelloViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Welcome"
-        welcomeLabel.text = "Welcome \(String(describing: welcomeMessage))"
+        welcomeLabel.text = "Welcome \(welcomeMessage ?? ""))"
         essentialsButton.addTarget(self, action: #selector(launchEssentialsListVC), for: .touchUpInside)
     }
     
@@ -33,9 +33,7 @@ class HelloViewController: UIViewController {
     func launchEssentialsListVC(){
         let storyBoard = UIStoryboard(name: "EssentialsListViewController", bundle: nil)
         let essentialsListViewController = storyBoard.instantiateViewController(withIdentifier: "EssentialsListViewController") as! EssentialsListViewController
-        //  helloViewController.welcomeMessage = usernameTextField.text
-        self.navigationController?.pushViewController(essentialsListViewController, animated: true)
+    self.navigationController?.pushViewController(essentialsListViewController, animated: true)
     }
-    
     
 }

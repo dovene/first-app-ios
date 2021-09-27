@@ -22,6 +22,8 @@
 		D7487EC327009C550091DEA4 /* Essential.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7487EC227009C550091DEA4 /* Essential.swift */; };
 		D7487EC527009ED20091DEA4 /* EssentialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7487EC427009ED20091DEA4 /* EssentialTableViewCell.xib */; };
 		D7487EC727009FFB0091DEA4 /* EssentialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7487EC627009FFB0091DEA4 /* EssentialTableViewCell.swift */; };
+		D7487EC92701A4730091DEA4 /* EssentialDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7487EC82701A4730091DEA4 /* EssentialDetailViewController.swift */; };
+		D7487ECB2701A4BA0091DEA4 /* EssentialDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7487ECA2701A4BA0091DEA4 /* EssentialDetailViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		D7487EC227009C550091DEA4 /* Essential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Essential.swift; sourceTree = "<group>"; };
 		D7487EC427009ED20091DEA4 /* EssentialTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EssentialTableViewCell.xib; sourceTree = "<group>"; };
 		D7487EC627009FFB0091DEA4 /* EssentialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialTableViewCell.swift; sourceTree = "<group>"; };
+		D7487EC82701A4730091DEA4 /* EssentialDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialDetailViewController.swift; sourceTree = "<group>"; };
+		D7487ECA2701A4BA0091DEA4 /* EssentialDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EssentialDetailViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,7 @@
 				D7487E9127005CE40091DEA4 /* LaunchScreen.storyboard */,
 				D7487EB9270079840091DEA4 /* HelloViewController.storyboard */,
 				D7487EC427009ED20091DEA4 /* EssentialTableViewCell.xib */,
+				D7487ECA2701A4BA0091DEA4 /* EssentialDetailViewController.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 			children = (
 				D7487E8A27005CB40091DEA4 /* ViewController.swift */,
 				D7487EBB27007E1E0091DEA4 /* HelloViewController.swift */,
+				D7487EC82701A4730091DEA4 /* EssentialDetailViewController.swift */,
 				D7487EBF270095FE0091DEA4 /* EssentialsListViewController.swift */,
 				D7487EC627009FFB0091DEA4 /* EssentialTableViewCell.swift */,
 			);
@@ -286,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7487EC527009ED20091DEA4 /* EssentialTableViewCell.xib in Resources */,
+				D7487ECB2701A4BA0091DEA4 /* EssentialDetailViewController.storyboard in Resources */,
 				D7487EBA270079840091DEA4 /* HelloViewController.storyboard in Resources */,
 				D7487E9327005CE40091DEA4 /* LaunchScreen.storyboard in Resources */,
 				D7487E9027005CE40091DEA4 /* Assets.xcassets in Resources */,
@@ -315,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7487EC92701A4730091DEA4 /* EssentialDetailViewController.swift in Sources */,
 				D7487EC0270095FE0091DEA4 /* EssentialsListViewController.swift in Sources */,
 				D7487E8B27005CB40091DEA4 /* ViewController.swift in Sources */,
 				D7487EC327009C550091DEA4 /* Essential.swift in Sources */,

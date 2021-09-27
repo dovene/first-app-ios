@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-class EssentialsListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+class EssentialsListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, EssentialTableViewCellDelegate {
+
     @IBOutlet private weak var tableView: UITableView!
     private var essentials = [Essential]()
     private let viewCellName: String = "EssentialTableViewCell"
@@ -35,6 +35,7 @@ class EssentialsListViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: viewCellName) as! EssentialTableViewCell
         cell.setEssential(essentials[indexPath.row])
+        cell.essentialTableViewCellDelegate = self
         return cell
     }
     
@@ -42,4 +43,12 @@ class EssentialsListViewController: UIViewController, UITableViewDelegate, UITab
         return 120
     }
     
+    func getSelectedEssential(essential: Essential) {
+        let essentialDetailSB = UIStoryboard(name: "EssentialDetailViewController", bundle: nil)
+        let essentialDetailViewController = essentialDetailSB.instantiateViewController(identifier: "EssentialDetailViewController") as! EssentialDetailViewController
+        essentialDetailViewController.essential = essential
+       // display it modally for variety sake !
+       present(essentialDetailViewController, animated: true, completion: nil)
+    }
+
 }

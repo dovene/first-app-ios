@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Essential Detail View Controller-->
+        <scene sceneID="npN-e8-tft">
+            <objects>
+                <viewController storyboardIdentifier="EssentialDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lR6-AK-cxN" customClass="EssentialDetailViewController" customModule="firstapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UFM-4c-Ebn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpI-Oc-YiR">
+                                <rect key="frame" x="16" y="84" width="382" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYF-2s-IaL">
+                                <rect key="frame" x="16" y="125" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TYF-2s-IaL" firstAttribute="leading" secondItem="j6l-GQ-cNm" secondAttribute="leading" constant="16" id="5Jz-xu-nIf"/>
+                            <constraint firstItem="j6l-GQ-cNm" firstAttribute="trailing" secondItem="TYF-2s-IaL" secondAttribute="trailing" constant="16" id="FM9-Cz-nUz"/>
+                            <constraint firstItem="TYF-2s-IaL" firstAttribute="top" secondItem="LpI-Oc-YiR" secondAttribute="bottom" constant="7.5" id="GPQ-3b-9Oh"/>
+                            <constraint firstItem="LpI-Oc-YiR" firstAttribute="top" secondItem="j6l-GQ-cNm" secondAttribute="top" constant="40" id="l1w-fW-Ndl"/>
+                            <constraint firstItem="LpI-Oc-YiR" firstAttribute="leading" secondItem="j6l-GQ-cNm" secondAttribute="leading" constant="16" id="woJ-G6-5Ir"/>
+                            <constraint firstItem="j6l-GQ-cNm" firstAttribute="trailing" secondItem="LpI-Oc-YiR" secondAttribute="trailing" constant="16" id="xtL-jb-8Kl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="j6l-GQ-cNm"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="TYF-2s-IaL" id="r7f-wv-Y86"/>
+                        <outlet property="titleLabel" destination="LpI-Oc-YiR" id="1e7-mZ-1WE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PaP-Xr-Wmr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="96"/>
+        </scene>
+    </scenes>
+</document>
