@@ -15,13 +15,27 @@ class HelloViewController: UIViewController {
     
     public var welcomeMessage : String?
     @IBOutlet private weak var welcomeLabel: UILabel!
+    @IBOutlet private weak var essentialsButton: UIButton!
     
     // MARK: - View Life Cycle
-
-      override func viewDidLoad() {
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
         title = "Welcome"
-        welcomeLabel.text = welcomeMessage
-      }
+        welcomeLabel.text = "Welcome \(String(describing: welcomeMessage))"
+        essentialsButton.addTarget(self, action: #selector(launchEssentialsListVC), for: .touchUpInside)
+    }
+    
+    
+    
+    // MARK: - Actions
+    @objc
+    func launchEssentialsListVC(){
+        let storyBoard = UIStoryboard(name: "EssentialsListViewController", bundle: nil)
+        let essentialsListViewController = storyBoard.instantiateViewController(withIdentifier: "EssentialsListViewController") as! EssentialsListViewController
+        //  helloViewController.welcomeMessage = usernameTextField.text
+        self.navigationController?.pushViewController(essentialsListViewController, animated: true)
+    }
+    
     
 }

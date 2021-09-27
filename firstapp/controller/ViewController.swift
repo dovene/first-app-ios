@@ -9,16 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     // MARK: - Properties
-
+    
     @IBOutlet private weak var label: UILabel!
     @IBOutlet private weak var button: UIButton!
     @IBOutlet private weak var usernameTextField: UITextField!
     
-
+    
     // MARK: - View Life Cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "iOS Essentials"
@@ -30,16 +30,16 @@ class ViewController: UIViewController {
         usernameTextField.endEditing(true)
     }
     
-     // MARK: - Actions
+    // MARK: - Actions
     
     @objc
     func launchHelloVC(){
         let storyBoard = UIStoryboard(name: "HelloViewController", bundle: nil)
         let helloViewController = storyBoard.instantiateViewController(withIdentifier: "HelloViewController") as! HelloViewController
         helloViewController.welcomeMessage = usernameTextField.text
-         self.navigationController?.pushViewController(helloViewController, animated: true)
+        self.navigationController?.pushViewController(helloViewController, animated: true)
     }
-
-
+    
+    
 }
 

@@ -17,6 +17,11 @@
 		D7487EA927005CE60091DEA4 /* firstappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7487EA827005CE60091DEA4 /* firstappUITests.swift */; };
 		D7487EBA270079840091DEA4 /* HelloViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7487EB9270079840091DEA4 /* HelloViewController.storyboard */; };
 		D7487EBC27007E1E0091DEA4 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7487EBB27007E1E0091DEA4 /* HelloViewController.swift */; };
+		D7487EBE2700950A0091DEA4 /* EssentialsListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7487EBD2700950A0091DEA4 /* EssentialsListViewController.storyboard */; };
+		D7487EC0270095FE0091DEA4 /* EssentialsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7487EBF270095FE0091DEA4 /* EssentialsListViewController.swift */; };
+		D7487EC327009C550091DEA4 /* Essential.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7487EC227009C550091DEA4 /* Essential.swift */; };
+		D7487EC527009ED20091DEA4 /* EssentialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7487EC427009ED20091DEA4 /* EssentialTableViewCell.xib */; };
+		D7487EC727009FFB0091DEA4 /* EssentialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7487EC627009FFB0091DEA4 /* EssentialTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,11 @@
 		D7487EAA27005CE60091DEA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7487EB9270079840091DEA4 /* HelloViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HelloViewController.storyboard; sourceTree = "<group>"; };
 		D7487EBB27007E1E0091DEA4 /* HelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
+		D7487EBD2700950A0091DEA4 /* EssentialsListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EssentialsListViewController.storyboard; sourceTree = "<group>"; };
+		D7487EBF270095FE0091DEA4 /* EssentialsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialsListViewController.swift; sourceTree = "<group>"; };
+		D7487EC227009C550091DEA4 /* Essential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Essential.swift; sourceTree = "<group>"; };
+		D7487EC427009ED20091DEA4 /* EssentialTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EssentialTableViewCell.xib; sourceTree = "<group>"; };
+		D7487EC627009FFB0091DEA4 /* EssentialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +113,7 @@
 		D7487E8527005CB40091DEA4 /* firstapp */ = {
 			isa = PBXGroup;
 			children = (
+				D7487EC1270099680091DEA4 /* model */,
 				D7487E9427005CE40091DEA4 /* Info.plist */,
 				D7487EB82700773C0091DEA4 /* Supporting Files */,
 				D7487EB7270077230091DEA4 /* controller */,
@@ -132,9 +143,11 @@
 		D7487EB6270077170091DEA4 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				D7487EBD2700950A0091DEA4 /* EssentialsListViewController.storyboard */,
 				D7487E8C27005CB40091DEA4 /* Main.storyboard */,
 				D7487E9127005CE40091DEA4 /* LaunchScreen.storyboard */,
 				D7487EB9270079840091DEA4 /* HelloViewController.storyboard */,
+				D7487EC427009ED20091DEA4 /* EssentialTableViewCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -144,6 +157,8 @@
 			children = (
 				D7487E8A27005CB40091DEA4 /* ViewController.swift */,
 				D7487EBB27007E1E0091DEA4 /* HelloViewController.swift */,
+				D7487EBF270095FE0091DEA4 /* EssentialsListViewController.swift */,
+				D7487EC627009FFB0091DEA4 /* EssentialTableViewCell.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -156,6 +171,14 @@
 				D7487E8627005CB40091DEA4 /* AppDelegate.swift */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D7487EC1270099680091DEA4 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D7487EC227009C550091DEA4 /* Essential.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +285,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7487EC527009ED20091DEA4 /* EssentialTableViewCell.xib in Resources */,
 				D7487EBA270079840091DEA4 /* HelloViewController.storyboard in Resources */,
 				D7487E9327005CE40091DEA4 /* LaunchScreen.storyboard in Resources */,
 				D7487E9027005CE40091DEA4 /* Assets.xcassets in Resources */,
+				D7487EBE2700950A0091DEA4 /* EssentialsListViewController.storyboard in Resources */,
 				D7487E8E27005CB40091DEA4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,10 +315,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7487EC0270095FE0091DEA4 /* EssentialsListViewController.swift in Sources */,
 				D7487E8B27005CB40091DEA4 /* ViewController.swift in Sources */,
+				D7487EC327009C550091DEA4 /* Essential.swift in Sources */,
 				D7487E8727005CB40091DEA4 /* AppDelegate.swift in Sources */,
 				D7487E8927005CB40091DEA4 /* SceneDelegate.swift in Sources */,
 				D7487EBC27007E1E0091DEA4 /* HelloViewController.swift in Sources */,
+				D7487EC727009FFB0091DEA4 /* EssentialTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
