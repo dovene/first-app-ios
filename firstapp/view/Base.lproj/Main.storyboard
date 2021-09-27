@@ -23,7 +23,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mS-64-0kI">
                                 <rect key="frame" x="16" y="280" width="382" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Display essentials"/>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z9c-fv-FLO">
                                 <rect key="frame" x="16" y="220" width="382" height="34"/>
