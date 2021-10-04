@@ -8,18 +8,29 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class EssentialsListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, EssentialTableViewCellDelegate {
 
     @IBOutlet private weak var tableView: UITableView!
-    private var essentials = [Essential]()
     private let viewCellName: String = "EssentialTableViewCell"
+    private var essentials = [NSManagedObject] ()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+          let managedContext =
+            AppDelegate.persistentContainer.viewContext
+          let fetchRequest =
+            NSFetchRequest<NSManagedObject>(entityName: "EssentialEntity")
+          do {
+            essentials = try managedContext.fetch(fetchRequest)
+          } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+          }
+    }
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        essentials.append(Essential("mock tile", "mock description"))
-        essentials.append(Essential("mock dev title", "mock dev description"))
         
         tableView.register(UINib(nibName: viewCellName, bundle: nil), forCellReuseIdentifier: viewCellName)
         tableView.dataSource = self
@@ -34,7 +45,8 @@ class EssentialsListViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: viewCellName) as! EssentialTableViewCell
-        cell.setEssential(essentials[indexPath.row])
+        let essential = Essential(essentials[indexPath.row].value(forKey: "title") as! String, essentials[indexPath.row].value(forKey: "comments") as! String)
+        cell.setEssential(essential)
         cell.essentialTableViewCellDelegate = self
         return cell
     }

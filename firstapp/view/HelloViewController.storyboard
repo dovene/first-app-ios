@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qkr-dK-0zZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qkr-dK-0zZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,22 +23,42 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVb-wE-XJy" userLabel="Essentials">
-                                <rect key="frame" x="173" y="151" width="69" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVb-wE-XJy" userLabel="Essentials">
+                                <rect key="frame" x="16" y="257" width="382" height="30"/>
                                 <state key="normal" title="Essentials"/>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Essential name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GnM-ZS-DWC">
+                                <rect key="frame" x="16" y="140" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Essential description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="269-Bs-T8h">
+                                <rect key="frame" x="16" y="201" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ddD-R0-hhS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="JVb-wE-XJy" firstAttribute="leading" secondItem="ddD-R0-hhS" secondAttribute="leading" constant="16" id="0Lt-Eu-9rg"/>
+                            <constraint firstItem="JVb-wE-XJy" firstAttribute="top" secondItem="FI4-BK-4vI" secondAttribute="bottom" constant="160" id="OQD-qc-EXR"/>
                             <constraint firstItem="FI4-BK-4vI" firstAttribute="top" secondItem="ddD-R0-hhS" secondAttribute="top" constant="32" id="Rrl-Bs-BDu"/>
                             <constraint firstItem="ddD-R0-hhS" firstAttribute="trailing" secondItem="FI4-BK-4vI" secondAttribute="trailing" constant="16" id="XKA-kZ-NNS"/>
+                            <constraint firstItem="ddD-R0-hhS" firstAttribute="trailing" secondItem="GnM-ZS-DWC" secondAttribute="trailing" constant="16" id="d9T-Qa-Hk6"/>
+                            <constraint firstItem="ddD-R0-hhS" firstAttribute="trailing" secondItem="269-Bs-T8h" secondAttribute="trailing" constant="16" id="fw9-6Z-WE2"/>
+                            <constraint firstItem="269-Bs-T8h" firstAttribute="leading" secondItem="ddD-R0-hhS" secondAttribute="leading" constant="16" id="iu7-FM-VvJ"/>
+                            <constraint firstItem="GnM-ZS-DWC" firstAttribute="top" secondItem="FI4-BK-4vI" secondAttribute="bottom" constant="43" id="kwX-0M-8xG"/>
+                            <constraint firstItem="269-Bs-T8h" firstAttribute="top" secondItem="GnM-ZS-DWC" secondAttribute="bottom" constant="27" id="nwD-RR-9l5"/>
+                            <constraint firstItem="GnM-ZS-DWC" firstAttribute="leading" secondItem="ddD-R0-hhS" secondAttribute="leading" constant="16" id="qUL-5S-uHd"/>
                             <constraint firstItem="FI4-BK-4vI" firstAttribute="leading" secondItem="ddD-R0-hhS" secondAttribute="leading" constant="16" id="sF6-kU-PNb"/>
+                            <constraint firstItem="ddD-R0-hhS" firstAttribute="trailing" secondItem="JVb-wE-XJy" secondAttribute="trailing" constant="16" id="xAE-AQ-QDP"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ddD-R0-hhS"/>
                     </view>
                     <connections>
+                        <outlet property="descriptionTextField" destination="269-Bs-T8h" id="Xch-gu-XgH"/>
                         <outlet property="essentialsButton" destination="JVb-wE-XJy" id="xCU-qY-OKR"/>
+                        <outlet property="nameTextField" destination="GnM-ZS-DWC" id="Dd1-o4-dvY"/>
                         <outlet property="welcomeLabel" destination="FI4-BK-4vI" id="ZAa-54-nKN"/>
                     </connections>
                 </viewController>
@@ -45,4 +67,9 @@
             <point key="canvasLocation" x="171" y="-106"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

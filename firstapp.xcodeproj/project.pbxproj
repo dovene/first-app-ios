@@ -24,6 +24,7 @@
 		D7487EC727009FFB0091DEA4 /* EssentialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7487EC627009FFB0091DEA4 /* EssentialTableViewCell.swift */; };
 		D7487EC92701A4730091DEA4 /* EssentialDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7487EC82701A4730091DEA4 /* EssentialDetailViewController.swift */; };
 		D7487ECB2701A4BA0091DEA4 /* EssentialDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7487ECA2701A4BA0091DEA4 /* EssentialDetailViewController.storyboard */; };
+		E0E7C216270A0A4400F6DABB /* firstapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0E7C214270A0A4400F6DABB /* firstapp.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		D7487EC627009FFB0091DEA4 /* EssentialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialTableViewCell.swift; sourceTree = "<group>"; };
 		D7487EC82701A4730091DEA4 /* EssentialDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialDetailViewController.swift; sourceTree = "<group>"; };
 		D7487ECA2701A4BA0091DEA4 /* EssentialDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EssentialDetailViewController.storyboard; sourceTree = "<group>"; };
+		E0E7C215270A0A4400F6DABB /* firstapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = firstapp.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		D7487E8527005CB40091DEA4 /* firstapp */ = {
 			isa = PBXGroup;
 			children = (
+				E0E7C213270A09DE00F6DABB /* database */,
 				D7487EC1270099680091DEA4 /* model */,
 				D7487E9427005CE40091DEA4 /* Info.plist */,
 				D7487EB82700773C0091DEA4 /* Supporting Files */,
@@ -185,6 +188,14 @@
 				D7487EC227009C550091DEA4 /* Essential.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		E0E7C213270A09DE00F6DABB /* database */ = {
+			isa = PBXGroup;
+			children = (
+				E0E7C214270A0A4400F6DABB /* firstapp.xcdatamodeld */,
+			);
+			path = database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0E7C216270A0A4400F6DABB /* firstapp.xcdatamodeld in Sources */,
 				D7487EC92701A4730091DEA4 /* EssentialDetailViewController.swift in Sources */,
 				D7487EC0270095FE0091DEA4 /* EssentialsListViewController.swift in Sources */,
 				D7487E8B27005CB40091DEA4 /* ViewController.swift in Sources */,
@@ -652,6 +664,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E0E7C214270A0A4400F6DABB /* firstapp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E0E7C215270A0A4400F6DABB /* firstapp.xcdatamodel */,
+			);
+			currentVersion = E0E7C215270A0A4400F6DABB /* firstapp.xcdatamodel */;
+			path = firstapp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D7487E7B27005CB40091DEA4 /* Project object */;
 }
