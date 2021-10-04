@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,6 +25,8 @@
 		D7487EC92701A4730091DEA4 /* EssentialDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7487EC82701A4730091DEA4 /* EssentialDetailViewController.swift */; };
 		D7487ECB2701A4BA0091DEA4 /* EssentialDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7487ECA2701A4BA0091DEA4 /* EssentialDetailViewController.storyboard */; };
 		E0E7C216270A0A4400F6DABB /* firstapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0E7C214270A0A4400F6DABB /* firstapp.xcdatamodeld */; };
+		E0E7C21F270B0FBF00F6DABB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E0E7C21E270B0FBF00F6DABB /* Alamofire */; };
+		E0E7C221270B141E00F6DABB /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E7C220270B141E00F6DABB /* GithubRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,7 @@
 		D7487EC82701A4730091DEA4 /* EssentialDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialDetailViewController.swift; sourceTree = "<group>"; };
 		D7487ECA2701A4BA0091DEA4 /* EssentialDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EssentialDetailViewController.storyboard; sourceTree = "<group>"; };
 		E0E7C215270A0A4400F6DABB /* firstapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = firstapp.xcdatamodel; sourceTree = "<group>"; };
+		E0E7C220270B141E00F6DABB /* GithubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0E7C21F270B0FBF00F6DABB /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				D7487EC227009C550091DEA4 /* Essential.swift */,
+				E0E7C220270B141E00F6DABB /* GithubRepository.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -214,6 +219,9 @@
 			dependencies = (
 			);
 			name = firstapp;
+			packageProductDependencies = (
+				E0E7C21E270B0FBF00F6DABB /* Alamofire */,
+			);
 			productName = firstapp;
 			productReference = D7487E8327005CB40091DEA4 /* firstapp.app */;
 			productType = "com.apple.product-type.application";
@@ -286,6 +294,9 @@
 				Base,
 			);
 			mainGroup = D7487E7A27005CB40091DEA4;
+			packageReferences = (
+				E0E7C21D270B0FBF00F6DABB /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = D7487E8427005CB40091DEA4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -335,6 +346,7 @@
 			files = (
 				E0E7C216270A0A4400F6DABB /* firstapp.xcdatamodeld in Sources */,
 				D7487EC92701A4730091DEA4 /* EssentialDetailViewController.swift in Sources */,
+				E0E7C221270B141E00F6DABB /* GithubRepository.swift in Sources */,
 				D7487EC0270095FE0091DEA4 /* EssentialsListViewController.swift in Sources */,
 				D7487E8B27005CB40091DEA4 /* ViewController.swift in Sources */,
 				D7487EC327009C550091DEA4 /* Essential.swift in Sources */,
@@ -664,6 +676,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E0E7C21D270B0FBF00F6DABB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E0E7C21E270B0FBF00F6DABB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0E7C21D270B0FBF00F6DABB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		E0E7C214270A0A4400F6DABB /* firstapp.xcdatamodeld */ = {

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uee-w6-k2V">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uee-w6-k2V">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,7 +23,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mS-64-0kI">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mS-64-0kI">
                                 <rect key="frame" x="16" y="280" width="382" height="30"/>
                                 <state key="normal" title="Display essentials"/>
                             </button>
@@ -30,24 +32,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VbV-rn-KzG">
+                                <rect key="frame" x="16" y="330" width="382" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Github user repositories stats"/>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z9c-fv-FLO" secondAttribute="trailing" constant="16" id="3BQ-DU-KLd"/>
                             <constraint firstItem="6mS-64-0kI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="DTY-hq-iBL"/>
                             <constraint firstItem="z9c-fv-FLO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="H4x-C4-eZC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6mS-64-0kI" secondAttribute="trailing" constant="16" id="Isr-Oo-qvx"/>
                             <constraint firstItem="Rts-pS-Beq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="71" id="PUa-cz-RMg"/>
+                            <constraint firstItem="VbV-rn-KzG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="S64-Dv-Wm3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VbV-rn-KzG" secondAttribute="trailing" constant="16" id="U7g-9P-eAR"/>
                             <constraint firstItem="6mS-64-0kI" firstAttribute="top" secondItem="Rts-pS-Beq" secondAttribute="bottom" constant="100" id="ZnW-ca-1CP"/>
+                            <constraint firstItem="VbV-rn-KzG" firstAttribute="top" secondItem="6mS-64-0kI" secondAttribute="bottom" constant="20" id="mhv-hU-m9M"/>
                             <constraint firstItem="Rts-pS-Beq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="nZV-FI-j5u"/>
                             <constraint firstItem="z9c-fv-FLO" firstAttribute="top" secondItem="Rts-pS-Beq" secondAttribute="bottom" constant="40" id="syo-hb-3Ph"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rts-pS-Beq" secondAttribute="trailing" constant="16" id="uRW-Sx-hWK"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Wgh-0L-sLl"/>
                     <connections>
                         <outlet property="button" destination="6mS-64-0kI" id="gmO-Lj-l7D"/>
+                        <outlet property="githubRepositoriesButton" destination="VbV-rn-KzG" id="YGw-0Y-b7t"/>
                         <outlet property="label" destination="Rts-pS-Beq" id="zgz-Pm-Fna"/>
                         <outlet property="usernameTextField" destination="z9c-fv-FLO" id="ncr-ek-vDk"/>
                     </connections>
@@ -75,4 +86,9 @@
             <point key="canvasLocation" x="-294.20289855072468" y="97.767857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
