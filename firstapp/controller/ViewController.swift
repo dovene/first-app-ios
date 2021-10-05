@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         title = "iOS Essentials"
         label.text = "Hello World from the next iOS rock star"
         button.addTarget(self, action: #selector(launchHelloVC), for: .touchUpInside)
-        githubRepositoriesButton.addTarget(self, action: #selector(displayGithubRepositories), for: .touchUpInside)’
+        githubRepositoriesButton.addTarget(self, action: #selector(displayGithubRepositories), for: .touchUpInside)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
